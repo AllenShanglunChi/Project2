@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Project2.SettingsPage">
+
+    <StackLayout>
+        <Label Text="Text Size" />
+        <Slider Value="{Binding TextSize, Mode=TwoWay}" Minimum="10" Maximum="30" />
+
+        <Label Text="Brightness" />
+        <Slider Value="{Binding Brightness, Mode=TwoWay}" Minimum="0" Maximum="100" />
+
+        <Switch IsToggled="{Binding SoundEffectsEnabled, Mode=TwoWay}" />
+        <Label Text="Enable Sound Effects" />
+
+        <Button Text="Save" Clicked="SaveButton_Clicked" />
+    </StackLayout>
+
+</ContentPage>

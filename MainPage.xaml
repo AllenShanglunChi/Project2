@@ -50,5 +50,7 @@
 
         <!-- Add Button -->
         <Button x:Name="addButton" Text="Add" Clicked="OnAddClicked" />
+        <!-- Settings Button -->
+        <Button Text="Settings" Clicked="OnSettingsClicked" />
     </StackLayout>
 </ContentPage>

@@ -49,6 +49,10 @@ namespace Project2
             Navigation.PushAsync(addStaffPage);
         }
 
-
+        private void OnSettingsClicked(object sender, EventArgs e)
+        {
+            // Navigate to SettingsPage
+            Navigation.PushAsync(new SettingsPage());
+        }
     }
 }
