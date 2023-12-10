@@ -82,6 +82,9 @@ namespace Project2
             // add the new staff to the collection
             _viewModel.StaffList.Add(newStaff);
 
+            // Display an alert indicating a successful update
+            DisplayAlert("Adding Successful", "Staff information has been added.", "OK");
+
             Navigation.PopAsync();
         }
 
