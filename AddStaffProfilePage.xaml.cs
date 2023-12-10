@@ -12,6 +12,7 @@ namespace Project2
         private ObservableCollection<Department> _departments;
         private MainPageViewModel _viewModel; // Add a reference to MainPageViewModel
 
+        // Constructor for passing departments and view model
         public AddStaffProfilePage(ObservableCollection<Department> departments, MainPageViewModel viewModel)
         {
             InitializeComponent();
@@ -23,9 +24,15 @@ namespace Project2
             PopulateDepartments();
         }
 
-        public AddStaffProfilePage(MainPageViewModel bindingContext)
+        // Default constructor, initializes with an empty ObservableCollection
+        public AddStaffProfilePage()
         {
-            BindingContext = bindingContext;
+            InitializeComponent();
+            _departments = new ObservableCollection<Department>();
+            _viewModel = new MainPageViewModel();
+            BindingContext = _viewModel;
+
+            PopulateDepartments();
         }
 
         private void PopulateDepartments()

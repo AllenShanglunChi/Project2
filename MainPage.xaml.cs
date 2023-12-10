@@ -39,7 +39,7 @@ namespace Project2
 
             Debug.WriteLine("OnAddClicked executed");
             // Handle the Add button click event
-            Navigation.PushAsync(new AddStaffProfilePage((MainPageViewModel)BindingContext));
+            Navigation.PushAsync(new AddStaffProfilePage());
         }
 
     }

@@ -52,7 +52,7 @@
             <Button Grid.Column="0" Text="Update" Clicked="OnUpdateClicked" />
 
             <!-- Empty space in the middle -->
-            <!-- You can adjust WidthRequest to control the space -->
+            <!-- Can adjust WidthRequest to control the space -->
             <BoxView Grid.Column="1" WidthRequest="20" />
 
             <!-- 'Back' button on the right -->
