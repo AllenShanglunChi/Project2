@@ -18,16 +18,45 @@
             </ScrollView>
 
             <!-- Staff Details -->
-            <Label Text="{Binding Name}" FontSize="24" />
-            <Label Text="{Binding Phone}" FontSize="18" />
-            <Label Text="{Binding DepartmentName}" FontSize="18" />
-            <Label Text="{Binding Address}" FontSize="18" />
+            <StackLayout>
+                <StackLayout Orientation="Horizontal" Spacing="10">
+                    <Label Text="Name: " FontSize="18" VerticalOptions="Center" TextColor="Red" FontAttributes="Bold" />
+                    <Label Text="{Binding Name}" FontSize="18" />
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Spacing="10">
+                    <Label Text="Phone: " FontSize="18" VerticalOptions="Center" TextColor="Red" FontAttributes="Bold" />
+                    <Label Text="{Binding Phone}" FontSize="18" />
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Spacing="10">
+                    <Label Text="DepartmentName: " FontSize="18" VerticalOptions="Center" TextColor="Red" FontAttributes="Bold" />
+                    <Label Text="{Binding DepartmentName}" FontSize="18" />
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Spacing="10">
+                    <Label Text="Address: " FontSize="18" VerticalOptions="Center" TextColor="Red" FontAttributes="Bold" />
+                    <Label Text="{Binding Address}" FontSize="18" />
+                </StackLayout>
+            </StackLayout>
         </StackLayout>
+        <!-- Use a Grid for button alignment -->
+        <Grid VerticalOptions="EndAndExpand" HorizontalOptions="FillAndExpand">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <!-- Left column for 'Update' button -->
+                <ColumnDefinition Width="Auto" />
+                <!-- Middle column for space -->
+                <ColumnDefinition Width="*" />
+                <!-- Right column for 'Back' button -->
+            </Grid.ColumnDefinitions>
 
-        <StackLayout VerticalOptions="EndAndExpand" HorizontalOptions="FillAndExpand" Margin="0,10,0,0">
-            <!-- Buttons at the Bottom -->
-            <Button Text="Update" Clicked="OnUpdateClicked" />
-            <Button Text="Back" Clicked="OnBackClicked" />
-        </StackLayout>
+            <!-- 'Update' button on the left -->
+            <Button Grid.Column="0" Text="Update" Clicked="OnUpdateClicked" />
+
+            <!-- Empty space in the middle -->
+            <!-- You can adjust WidthRequest to control the space -->
+            <BoxView Grid.Column="1" WidthRequest="20" />
+
+            <!-- 'Back' button on the right -->
+            <Button Grid.Column="2" Text="Back" Clicked="OnBackClicked" />
+        </Grid>
     </StackLayout>
 </ContentPage>
