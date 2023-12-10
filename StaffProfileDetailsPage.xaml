@@ -6,7 +6,7 @@
              mc:Ignorable="d"
              x:Class="Project2.StaffProfileDetailsPage"
              BackgroundColor="{DynamicResource PageBackgroundColor}">
-
+    <!-- add some margin to the left and right, adding Padding="20' to the outer 'StackLayout', wihch will add 20 units of padding on the left and right sides -->
     <StackLayout Padding="20">
         <StackLayout>
             <!-- Top Right Image -->
@@ -20,7 +20,7 @@
             <!-- Staff Details -->
             <Label Text="{Binding Name}" FontSize="24" />
             <Label Text="{Binding Phone}" FontSize="18" />
-            <Label Text="{Binding DepartmentId}" FontSize="18" />
+            <Label Text="{Binding DepartmentName}" FontSize="18" />
             <Label Text="{Binding Address}" FontSize="18" />
         </StackLayout>
 

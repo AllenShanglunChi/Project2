@@ -12,6 +12,13 @@ namespace Project2
             InitializeComponent();
             _selectedStaff = selectedStaff;
             _viewModel = viewModel;
+
+            // Fetch the Department corresponding to the DepartmentId
+            var department = _viewModel.Departments.FirstOrDefault(d => d.Id == _selectedStaff.DepartmentId);
+
+            // Set the DepartmentName property
+            _selectedStaff.DepartmentName = department?.Name;
+
             BindingContext = _selectedStaff;
         }
 

@@ -1,13 +1,11 @@
 ﻿using System.Collections.ObjectModel;
 
-
 namespace Project2
 {
     public class MainPageViewModel
     {
         public ObservableCollection<Staff> StaffList { get; set; } = new ObservableCollection<Staff>();
         public ObservableCollection<Department> Departments { get; set; } = new ObservableCollection<Department>();
-
         public MainPageViewModel()
         {
             // Populate Departments
