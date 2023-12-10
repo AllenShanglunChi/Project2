@@ -36,6 +36,13 @@ namespace Project2
                 existingStaff.Phone = updatedStaff.Phone;
                 existingStaff.DepartmentId = updatedStaff.DepartmentId;
                 existingStaff.Address = updatedStaff.Address;
+
+                // Set the DepartmentName based on the selected DepartmentId
+                var selectedDepartment = Departments.FirstOrDefault(d => d.Id == existingStaff.DepartmentId);
+                if (selectedDepartment != null)
+                {
+                    existingStaff.DepartmentName = selectedDepartment.Name;
+                }
             }
         }
 
