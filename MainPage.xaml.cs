@@ -1,4 +1,5 @@
 ﻿using Microsoft.Maui.Controls;
+using System.Collections.ObjectModel;
 using System.Diagnostics;
 
 namespace Project2
@@ -13,11 +14,6 @@ namespace Project2
             BindingContext = myMainPageViewModel;
             Console.WriteLine("MainPage constructor called");
 
-            //// Subscribe to ItemSelected event for the ListView
-            //staffListView.ItemSelected += OnItemSelected;
-
-            //// Subscribe to Clicked event for the Button
-            //addButton.Clicked += OnAddClicked;
         }
 
         private void OnItemSelected(object sender, SelectedItemChangedEventArgs e)
@@ -36,11 +32,23 @@ namespace Project2
 
         private void OnAddClicked(object sender, EventArgs e)
         {
-
             Debug.WriteLine("OnAddClicked executed");
-            // Handle the Add button click event
-            Navigation.PushAsync(new AddStaffProfilePage());
+
+            // Create a new instance of AddStaffProfilePage, passing the ViewModel
+            var addStaffPage = new AddStaffProfilePage(myMainPageViewModel.Departments, myMainPageViewModel);
+
+            // Subscribe to the Disappearing event of the AddStaffProfilePage
+            addStaffPage.Disappearing += (s, args) =>
+            {
+                // Handle the event when the AddStaffProfilePage disappears
+                // This will be triggered when the user saves or cancels
+                myMainPageViewModel.Departments = new ObservableCollection<Department>(myMainPageViewModel.Departments);
+            };
+
+            // Navigate to the AddStaffProfilePage
+            Navigation.PushAsync(addStaffPage);
         }
+
 
     }
 }

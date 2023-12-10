@@ -18,7 +18,14 @@
             <!-- Entry Fields -->
             <Entry Placeholder="Name" x:Name="nameEntry" FontSize="Medium" Margin="0,10,0,0" />
             <Entry Placeholder="Phone" x:Name="phoneEntry" FontSize="Medium" Margin="0,10,0,0" />
-            <Picker Title="Department" x:Name="departmentPicker" FontSize="Medium" Margin="0,10,0,0" ItemsSource="{Binding Departments}" ItemDisplayBinding="{Binding Name}" />
+            <Picker x:Name="departmentPicker" Title="Select Department" SelectedIndexChanged="OnPickerSelectedIndexChanged">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <!-- This will be populated dynamically in code-behind -->
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
             <Entry Placeholder="Address" x:Name="addressEntry" FontSize="Medium" Margin="0,10,0,0" />
         </StackLayout>
 
