@@ -41,6 +41,9 @@ namespace Project2
             var updatedStaffProfilePage = new StaffProfileDetailsPage(_staff, _viewModel);
             Navigation.PushAsync(updatedStaffProfilePage);
 
+            // Display an alert indicating a successful update
+            DisplayAlert("Update Successful", "Staff information has been updated.", "OK");
+
             // Navigate to the root page (Assuming MainPage is the root)
             Navigation.PopToRootAsync();
 
