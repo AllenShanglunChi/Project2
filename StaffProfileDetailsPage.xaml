@@ -7,8 +7,16 @@
              x:Class="Project2.StaffProfileDetailsPage"
              BackgroundColor="{DynamicResource PageBackgroundColor}">
 
-    <StackLayout>
+    <StackLayout Padding="20">
         <StackLayout>
+            <!-- Top Right Image -->
+            <Image Source="C:\Users\allen\OneDrive\TAFE IT Programming 2023\Semester 2\Mobile Dev Shaun\Assessments\Pro2\Images\roi_logo_colored.png" Aspect="AspectFit" WidthRequest="50" HeightRequest="50" HorizontalOptions="End" VerticalOptions="Start" />
+
+            <ScrollView>
+                <!-- Main Image -->
+                <Image x:Name="staffImage" Source="{Binding PhotoPath}" Aspect="AspectFit" WidthRequest="300" HeightRequest="200" />
+            </ScrollView>
+
             <!-- Staff Details -->
             <Label Text="{Binding Name}" FontSize="24" />
             <Label Text="{Binding Phone}" FontSize="18" />
