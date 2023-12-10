@@ -48,8 +48,7 @@ namespace Project2
 
         public void SaveStaff(Staff staff)
         {
-            // Implement actual saving logic here, e.g., calling a service or repository
-            // For demonstration purposes, add the staff directly to the StaffList
+            // Implement actual saving logic, add the staff directly to the StaffList
             StaffList.Add(staff);
         }
     }

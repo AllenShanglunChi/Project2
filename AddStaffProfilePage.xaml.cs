@@ -78,10 +78,8 @@ namespace Project2
                 Address = addressEntry.Text
             };
 
-            // Save the new staff profile to the backend or local storage
-            _viewModel.SaveStaff(newStaff);
 
-            // For demo purposes, add the new staff to the collection
+            // add the new staff to the collection
             _viewModel.StaffList.Add(newStaff);
 
             Navigation.PopAsync();
