@@ -37,7 +37,8 @@ namespace Project2
             // Update the staff details in the ViewModel 
             _viewModel.UpdateStaff(_staff);
 
-            Navigation.PopAsync(); // Navigate back after updating
+            // Navigate to a new instance of StaffProfileDetailsPage with the updated staff
+            Navigation.PushAsync(new StaffProfileDetailsPage(_staff, _viewModel));
         }
 
         private void OnCancelClicked(object sender, System.EventArgs e)
