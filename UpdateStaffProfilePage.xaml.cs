@@ -38,7 +38,12 @@ namespace Project2
             _viewModel.UpdateStaff(_staff);
 
             // Navigate to a new instance of StaffProfileDetailsPage with the updated staff
-            Navigation.PushAsync(new StaffProfileDetailsPage(_staff, _viewModel));
+            var updatedStaffProfilePage = new StaffProfileDetailsPage(_staff, _viewModel);
+            Navigation.PushAsync(updatedStaffProfilePage);
+
+            // Navigate to the root page (Assuming MainPage is the root)
+            Navigation.PopToRootAsync();
+
         }
 
         private void OnCancelClicked(object sender, System.EventArgs e)
