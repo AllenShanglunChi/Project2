@@ -13,11 +13,11 @@ namespace Project2
             BindingContext = myMainPageViewModel;
             Console.WriteLine("MainPage constructor called");
 
-            // Subscribe to ItemSelected event for the ListView
-            staffListView.ItemSelected += OnItemSelected;
+            //// Subscribe to ItemSelected event for the ListView
+            //staffListView.ItemSelected += OnItemSelected;
 
-            // Subscribe to Clicked event for the Button
-            addButton.Clicked += OnAddClicked;
+            //// Subscribe to Clicked event for the Button
+            //addButton.Clicked += OnAddClicked;
         }
 
         private void OnItemSelected(object sender, SelectedItemChangedEventArgs e)
