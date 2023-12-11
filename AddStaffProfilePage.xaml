@@ -13,7 +13,7 @@
 
         <StackLayout>
             <!-- Top Right Image (Empty) -->
-            <Image Source="C:\Users\allen\OneDrive\TAFE IT Programming 2023\Semester 2\Mobile Dev Shaun\Assessments\Pro2\Images\roi_logo_colored.png" Aspect="AspectFit" WidthRequest="90" HeightRequest="70" HorizontalOptions="End" VerticalOptions="Start" />
+            <Image Source="C:\Users\allen\Downloads\Tigers.png" Aspect="AspectFit" WidthRequest="110" HeightRequest="130" HorizontalOptions="End" VerticalOptions="Start" />
 
             <!-- Entry Fields -->
             <Entry Placeholder="Name" x:Name="nameEntry" FontSize="Medium" Margin="0,10,0,0" />
